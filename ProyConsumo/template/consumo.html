@@ -1,0 +1,49 @@
+ {% extends 'index.html' %}
+
+ 
+ {% block consumo %}
+ 
+  <div class="table-responsive">
+
+    <table class="table  table-bordered table-hover">
+        <thead class="table-dark">
+        <tr>
+           
+            <th scope="col">Register No.</th>
+            <th scope="col">VRMS</th>
+            <th scope="col">IRMS</th>
+            <th scope="col">S</th>
+            <th scope="col">P</th>
+            <th scope="col">Q</th>
+            <th scope="col">PF</th>
+            <th scope="col">PA</th>
+            <th scope="col">CAP</th>
+            <th scope="col">Status</th>
+            <th scope="col">Date</th>
+        </tr>
+        </thead>
+        <tbody>    
+        
+            {% for key,values in datos.items %}   
+            <tr> 
+                <td scope="row">{{key}}</td>  
+                <td scope="row">{{values.Vrms}}</td>                   
+                <td scope="row">{{values.Irms}}</td>
+                <td scope="row">{{values.S}}</td>
+                <td scope="row">{{values.P}}</td>
+                <td scope="row">{{values.Q}}</td>
+                <td scope="row">{{values.FP}}</td>
+                <td scope="row">{{values.AnguloFase}}</td>
+                <td scope="row">{{values.Capacitores}}</td>
+                <td scope="row">{{values.estatus}}</td>
+                <td scope="row">{{values.Fecha}}</td>
+           
+          
+            </tr>
+             {% endfor %}        
+        </tbody>
+    </table>
+</div>
+
+ {% endblock consumo %}
+     
